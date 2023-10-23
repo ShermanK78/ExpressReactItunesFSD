@@ -22,5 +22,11 @@
     "concurrently": "^8.2.1",
     "nodemon": "^3.0.1",
     "supertest": "^6.3.3"
+  },
+    "jest": {
+      "moduleNameMapper": {
+        "^axios$": "<rootDir>/server/__mocks__/axios.js"
+      }
+      }
   }
-}
+
