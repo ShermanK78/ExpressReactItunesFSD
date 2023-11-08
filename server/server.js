@@ -28,10 +28,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('Server Running'); // Display "Server Running" message
-});
-
 app.get('/proxy-image', async (req, res) => {
   try {
     const imageUrl = req.query.url; // Get the image URL from the request query
