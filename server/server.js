@@ -12,10 +12,7 @@ __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   // Serve static files from the client's build directory
   app.use(express.static(path.join(__dirname, "/client/build")));
-  app.get("*", (req, res) => {
-    // For any other routes, send the client's index.html
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-  });
+ 
 }
 
 app.use(bodyParser.json());
