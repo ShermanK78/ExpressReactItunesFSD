@@ -33,7 +33,7 @@ function App() {
   // Function to handle the search
   const handleSearch = async (term, entity) => {
     try {
-      const apiUrl = `https:/expressreactitunes.onrender.com/api/search?term=${term}&entity=${entity}`;
+      const apiUrl = `https://expressreactitunes.onrender.com/api/search?term=${term}&entity=${entity}`;
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
