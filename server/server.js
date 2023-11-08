@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const path = require('path');
-const port = process.env.PORT || 9002;
+const port = process.env.PORT || 80;
 
 __dirname = path.resolve();
 
@@ -26,6 +26,10 @@ app.use(helmet());
 app.use((req, res, next) => {
   res.setHeader('Content-Security-Policy', "img-src 'self' is1-ssl.mzstatic.com data:;");
   next();
+});
+
+app.get('/', (req, res) => {
+  res.send('Server Running'); // Display "Server Running" message
 });
 
 app.get('/proxy-image', async (req, res) => {
