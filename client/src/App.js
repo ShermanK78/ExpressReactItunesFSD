@@ -41,6 +41,9 @@ function App() {
       }
 
       const data = await response.json();
+      
+      console.log('API Response Data:', data); // Log the data to the console
+
       setSearchResults(data);
 
       await fetch('https://expressreactitunes.onrender.com/api/search', {
