@@ -33,7 +33,7 @@ function App() {
   // Function to handle the search
   const handleSearch = async (term, entity) => {
     try {
-      const apiUrl = `http:/expressreactitunes.onrender.com/api/search?term=${term}&entity=${entity}`;
+      const apiUrl = `https:/expressreactitunes.onrender.com/api/search?term=${term}&entity=${entity}`;
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
@@ -43,7 +43,7 @@ function App() {
       const data = await response.json();
       setSearchResults(data);
 
-      await fetch('http://expressreactitunes.onrender.com/api/search', {
+      await fetch('https://expressreactitunes.onrender.com/api/search', {
         method: 'POST', // Use POST method to send data to the server
         headers: {
           'Content-Type': 'application/json',
